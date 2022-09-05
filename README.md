@@ -38,7 +38,8 @@ Change owner of directory to use git.
     sudo chown -R www-data:www-data /home/saas_mqtt/
 ```
 paste deploy.php file in /var/www/html. and add new web hook in git setting's webhooks tab.
-here set http://206.189.82.115/deploy.php as a payload.
+
+Here set http://206.189.82.115/deploy.php as a payload.
 
 change the user to www-data and clone the git using ssh(not http).
 ```
@@ -46,3 +47,8 @@ change the user to www-data and clone the git using ssh(not http).
     git clone git@... /home/saas_mqtt
 ```
 Now the server would sync automatically whenever git pushed.
+
+### If you have an existing github directory, You need to set the URL for an existing remote:
+```
+    git remote set-url origin git@github.com:gitusername/repository.git
+```
