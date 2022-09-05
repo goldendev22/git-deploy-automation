@@ -1,0 +1,11 @@
+sudo mkdir /var/www/.ssh
+sudo chown -R www-data:www-data /var/www/.ssh/
+sudo -Hu www-data ssh-keygen -t rsa
+
+sudo cat /var/www/.ssh/id_rsa.pub
+
+sudo chown -R www-data:www-data /var/www/html/
+sudo chown -R www-data:www-data /home/saas_mqtt/
+
+sudo su -l www-data -s /bin/bash
+git clone git@... /home/saas_mqtt
