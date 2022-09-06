@@ -6,7 +6,8 @@
 		'git status',
 		'git submodule sync',
 		'git submodule update',
-		'git submodule status'
+		'git submodule status',
+		'pm2 restart all'
 	);
 	// Exec Commands
     chdir('/home/saas_mqtt');
